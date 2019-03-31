@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+
+			*{
+				margin:0;
+				padding:0;
+				font-family:Helvetica;
+				margin:0 auto;
+
+			}
+			a{
+				text-decoration: none;
+				cursor:pointer;
+				color:black;
+			}
+			body{
+				background-image:url(back6.jpeg);
+				background-size:cover;
+
+
+			}
+			#header{
+				width:100%;
+				height:150px;
+				text-align:center;
+				background-color:white;
+				color:black;
+
+			}
+			#divUL div{
+				float: left;
+			}
+			#playground{
+				width:720px;
+				height:640px;
+				/*margin-left:50px;*/
+				/*border:1px solid grey;*/
+				background-image:url(fringe.png);
+				background-size:cover;
+
+
+
+			}
+
+			#food{
+				width:80px;
+				width:80px;
+				background-size:cover;
+				position: absolute;
+
+			}
+			#drink{
+				width:100px;
+				width:100px;
+				background-size:cover;
+				position: absolute;
+
+			}
+			#leftbox{
+				width:880px;
+				height:780px;
+				position:relative;
+				/*margin:0 auto;*/
+				margin-left:20px;
+				margin-top:20px;
+				float:left;
+				background-color:#f8f8f8;
+				padding:20px;
+				/*border-radius:10% 0 10% 0;*/
+				-webkit-box-shadow: 0 15px 10px #777;
+				  -moz-box-shadow: 0 15px 10px #777;
+				  box-shadow: 0 15px 10px #777;
+			 
+			}
+			#rightBox{
+				max-width:880px;
+				height:460px;
+				background-color:#f8f8f8;
+				position:relative;
+				float:left;
+				margin-left:20px;
+				margin-top:20px;
+				/*border-radius:0 8% 0 8%;*/
+				padding:20px;
+				-webkit-box-shadow: 0 15px 10px #777;
+				  -moz-box-shadow: 0 15px 10px #777;
+				  box-shadow: 0 15px 10px #777;
+			}
+			#topimage{
+				width:100%;
+				height:70%;
+				background-image:url(whitespace.jpeg);
+				background-size:cover;
+			}
+			
+			button{
+				width:120px;
+				height:30px;
+				border-radius:10%;
+				background-color: white;
+
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<br><h5>Fringe Escape</h5>
+			<br>
+			<h1>Whitespace Gallery</h1>
+			<br>
+			EH8 9HQ
+		</div>
+		
+	
+	<div id="leftbox">
+		Post your photo on Instagram with hashtag #fringeless_3436 to see your pictures in our gallery and share your experience with the world.
+		<br>
+		<div class="wrapper">
+			<br>
+			<input type="file" multiple="multiple" name="listInput" id="listInput" value="" />
+			
+			<!-- <a href="#">save</a> -->
+			<!-- <button value="save">save</button> -->
+		</div>
+		<div id ="playground">
+				<!-- <div id="divUL"> -->
+					
+				<!-- </div> -->
+			<div id ="food"></div>
+			<div id ="drink"></div>
+		</div>
+		<br>
+		<button><a href="https://www.instagram.com/fortestsandtrials/">
+			Upload to Instagram
+		</a> </button>
+	</div>
+	<!-- <input name="print" type="button" id="bt" value="Print" /> -->
+	<div id="rightBox">
+		<div id="topimage"></div>
+		<div id="text">
+			<br><br>
+			<p>White Space Gallery was established as a result of the owners' passion for the arts.
+			</p>
+		</div>
+	</div>
+	
+
+	</body>
+	<!-- <script>
+
+	var gallerydrink = document.getElementById('drink');
+	var galleryfood =  document.getElementById('food');
+	var str= new Array("pattern2.png","pattern1.png","fringeless.png","4.png");
+	var str1 = new Array("homepage.jpg","ReImage.png");
+
+	var a;
+	var b;
+
+	function Pos(){
+
+		a=str[parseInt(Math.random()*(str.length))];
+		galleryfood.style.backgroundImage = "url("+a+")";
+		galleryfood.style.position = "absolute";
+		galleryfood.style.left = Math.floor(Math.random()*420)+"px";
+		galleryfood.style.top = Math.floor(Math.random()*420)+"px";
+		galleryfood.style.height="80px";
+		galleryfood.style.width="80px";
+		for(var k=0;k<=str.length;k++){
+			if(str[k]==a){
+			//删除
+			str.splice(str.indexOf(a),1);
+			}
+		};
+
+		b = str1[parseInt(Math.random()*(str1.length))];
+		gallerydrink.style.backgroundImage = "url("+b+")";
+		gallerydrink.style.position = "absolute";
+		gallerydrink.style.left = Math.floor(Math.random()*420)+"px";
+		gallerydrink.style.top = Math.floor(Math.random()*420)+"px";
+		gallerydrink.style.height="100px";
+		gallerydrink.style.width="100px";
+		for(var k=0;k<=str1.length;k++){
+			if(str1[k]==b){
+			//删除
+			str1.splice(str1.indexOf(b),1);
+			}
+		};
+
+	}
+	Pos()
+
+	
+	</script> -->
+
+	<script type="text/javascript">
+		
+		
+		//多张
+		document.getElementById("listInput").addEventListener("change",function(){
+			var files = this.files;
+			// var playground = document.getElementById("playground");
+			// var oUL = document.getElementById("divUL");
+			var oUL = document.getElementById("playground");
+			oUL.innerHTML = "";
+			for(var i = 0;i < files.length;i++){
+				oUL.innerHTML += '<div id = divOfImg'+i+'><img id="img'+i+'" /></div>'
+				var imgList = document.getElementById("img"+i);	
+				var divList = document.getElementById("divOfImg"+i);
+				imgList.style.width = 200+"px";
+				imgList.src = window.URL.createObjectURL(files[i]);
+				divList.style.position = "absolute";
+				divList.style.left = Math.floor(Math.random()*300)+150+"px";
+				divList.style.top = Math.floor(Math.random()*40)+310+"px";
+				console.log(imgList.src);
+			}
+
+			
+		});	
+		
+		
+		var bt = document.getElementById("bt");
+		var oUL = document.getElementById("playground");
+		bt.onclick = function(){
+				print(oUL);
+				}
+	
+
+
+	</script>
+</html>
